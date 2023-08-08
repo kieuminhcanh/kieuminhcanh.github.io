@@ -1,0 +1,168 @@
+[
+  {
+    "name": "v-row",
+    "props": {
+      "align": "center",
+      "justify": "center",
+      "class": "h-100"
+    },
+    "slots": {
+      "default": [
+        {
+          "name": "v-col",
+          "props": {
+            "cols": "12",
+            "sm": "8",
+            "md": "6"
+          },
+          "slots": {
+            "default": [
+              {
+                "name": "v-card",
+                "props": {
+                  "title": "Data Table"
+                },
+                "slots": {
+                  "default": [
+                    {
+                      "name": "v-divider"
+                    },
+                    {
+                      "name": "v-card-item",
+                      "slots": {
+                        "default": [
+                          {
+                            "name": "v-data-table",
+                            "props": {
+                              "headers": [
+                                {
+                                  "title": "Dessert (100g serving)",
+                                  "align": "start",
+                                  "sortable": false,
+                                  "key": "name"
+                                },
+                                {
+                                  "title": "Calories",
+                                  "align": "end",
+                                  "key": "calories"
+                                },
+                                {
+                                  "title": "Fat (g)",
+                                  "align": "end",
+                                  "key": "fat"
+                                },
+                                {
+                                  "title": "Carbs (g)",
+                                  "align": "end",
+                                  "key": "carbs"
+                                },
+                                {
+                                  "title": "Protein (g)",
+                                  "align": "end",
+                                  "key": "protein"
+                                },
+                                {
+                                  "title": "Iron (%)",
+                                  "align": "end",
+                                  "key": "iron"
+                                }
+                              ],
+                              "items": [
+                                {
+                                  "calories": 159,
+                                  "carbs": 24,
+                                  "fat": 6,
+                                  "iron": "1",
+                                  "name": "Frozen Yogurt",
+                                  "protein": 4
+                                },
+                                {
+                                  "calories": 375,
+                                  "carbs": 94,
+                                  "fat": 0,
+                                  "iron": "0",
+                                  "name": "Jelly bean",
+                                  "protein": 0
+                                },
+                                {
+                                  "calories": 518,
+                                  "carbs": 65,
+                                  "fat": 26,
+                                  "iron": "6",
+                                  "name": "KitKat",
+                                  "protein": 7
+                                },
+                                {
+                                  "calories": 262,
+                                  "carbs": 23,
+                                  "fat": 16,
+                                  "iron": "7",
+                                  "name": "Eclair",
+                                  "protein": 6
+                                },
+                                {
+                                  "calories": 356,
+                                  "carbs": 49,
+                                  "fat": 16,
+                                  "iron": "16",
+                                  "name": "Gingerbread",
+                                  "protein": 3.9
+                                },
+                                {
+                                  "calories": 237,
+                                  "carbs": 37,
+                                  "fat": 9,
+                                  "iron": "1",
+                                  "name": "Ice cream sandwich",
+                                  "protein": 4.3
+                                },
+                                {
+                                  "calories": 392,
+                                  "carbs": 98,
+                                  "fat": 0.2,
+                                  "iron": "2",
+                                  "name": "Lollipop",
+                                  "protein": 0
+                                },
+                                {
+                                  "calories": 305,
+                                  "carbs": 67,
+                                  "fat": 3.7,
+                                  "iron": "8",
+                                  "name": "Cupcake",
+                                  "protein": 4.3
+                                },
+                                {
+                                  "calories": 408,
+                                  "carbs": 87,
+                                  "fat": 3.2,
+                                  "iron": "45",
+                                  "name": "Honeycomb",
+                                  "protein": 6.5
+                                },
+                                {
+                                  "calories": 452,
+                                  "carbs": 51,
+                                  "fat": 25,
+                                  "iron": "22",
+                                  "name": "Donut",
+                                  "protein": 4.9
+                                }
+                              ],
+                              "item-value": "name",
+                              "class": "elevation-1"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

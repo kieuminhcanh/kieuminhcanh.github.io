@@ -1,0 +1,67 @@
+[
+  {
+    "name": "v-row",
+    "props": {
+      "align": "center",
+      "justify": "center",
+      "class": "h-100"
+    },
+    "slots": {
+      "default": [
+        {
+          "name": "v-col",
+          "props": {
+            "cols": "12",
+            "sm": "8",
+            "md": "6"
+          },
+          "slots": {
+            "default": [
+              {
+                "name": "v-card",
+                "props": {
+                  "title": "Tooltip"
+                },
+                "slots": {
+                  "default": [
+                    {
+                      "name": "v-divider"
+                    },
+                    {
+                      "name": "v-card-item",
+                      "slots": {
+                        "default": [
+                          {
+                            "name": "v-btn",
+                            "slots": {
+                              "default": [
+                                "Tooltip",
+                                {
+                                  "name": "v-tooltip",
+                                  "props": {
+                                    "activator": "parent"
+                                  },
+                                  "model": {
+                                    "key": "tooltip",
+                                    "value": true
+                                  },
+                                  "slots": {
+                                    "default": "Tooltip"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

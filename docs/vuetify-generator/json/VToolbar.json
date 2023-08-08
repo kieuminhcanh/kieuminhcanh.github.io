@@ -1,0 +1,39 @@
+[
+  {
+    "name": "VToolbar",
+    "slots": {
+      "default": [
+        {
+          "name": "VToolbarTitle",
+          "props": {
+            "text": "Vuetify Toolbar"
+          }
+        }
+      ],
+      "append": [
+        {
+          "name": "VBtn",
+          "props": {
+            "vartiant": "text",
+            "active": true,
+            "icon": "mdi-home"
+          }
+        },
+        {
+          "name": "VBtn",
+          "props": {
+            "vartiant": "text",
+            "text": "Services"
+          }
+        },
+        {
+          "name": "VBtn",
+          "props": {
+            "vartiant": "text",
+            "text": "About"
+          }
+        }
+      ]
+    }
+  }
+]

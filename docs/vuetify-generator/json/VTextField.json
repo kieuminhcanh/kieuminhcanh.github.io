@@ -1,0 +1,137 @@
+[
+  {
+    "name": "v-row",
+    "props": {
+      "align": "center",
+      "justify": "center",
+      "class": "h-100"
+    },
+    "slots": {
+      "default": [
+        {
+          "name": "v-col",
+          "props": {
+            "cols": "12",
+            "sm": "8",
+            "md": "6"
+          },
+          "slots": {
+            "default": [
+              {
+                "name": "v-card",
+                "props": {
+                  "title": "Text field"
+                },
+                "slots": {
+                  "default": [
+                    {
+                      "name": "v-divider"
+                    },
+                    {
+                      "name": "v-container",
+                      "slots": {
+                        "default": [
+                          {
+                            "name": "v-text-field",
+                            "props": {
+                              "label": "First name"
+                            },
+                            "model": {
+                              "key": "first",
+                              "value": "Ken"
+                            },
+                            "slots": {}
+                          },
+                          {
+                            "name": "v-text-field",
+                            "props": {
+                              "label": "Last name"
+                            },
+                            "model": {
+                              "key": "last",
+                              "value": "Kieu"
+                            },
+                            "slots": {}
+                          },
+                          {
+                            "name": "v-text-field",
+                            "props": {
+                              "label": "Email"
+                            },
+                            "model": {
+                              "key": "email",
+                              "value": "kenkieu@vuetify.com"
+                            },
+                            "slots": {}
+                          },
+                          {
+                            "name": "v-text-field",
+                            "props": {
+                              "label": "Password",
+                              "placeholder": "Enter your password"
+                            },
+                            "model": {
+                              "key": "password",
+                              "value": "12345678"
+                            },
+                            "slots": {}
+                          },
+                          {
+                            "name": "v-checkbox",
+                            "props": {
+                              "color": "secondary",
+                              "label": "I agree to site terms and conditions"
+                            },
+                            "model": {
+                              "key": "terms",
+                              "value": true
+                            },
+                            "slots": {}
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "name": "v-divider",
+                      "slots": {}
+                    },
+                    {
+                      "name": "v-card-actions",
+                      "slots": {
+                        "default": [
+                          {
+                            "name": "v-spacer",
+                            "slots": {}
+                          },
+                          {
+                            "name": "v-btn",
+                            "props": {
+                              "color": "success"
+                            },
+                            "slots": {
+                              "default": [
+                                "Complete Registration",
+                                {
+                                  "name": "v-icon",
+                                  "props": {
+                                    "icon": "mdi-chevron-right",
+                                    "end": true
+                                  },
+                                  "slots": {}
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]
