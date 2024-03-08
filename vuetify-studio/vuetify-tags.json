@@ -7482,6 +7482,12 @@
         "type": "boolean"
       },
       {
+        "title": "static",
+        "value": "static",
+        "description": "Puts all children components static",
+        "type": "boolean"
+      },
+      {
         "title": "selectedClass",
         "value": "selectedClass",
         "description": "Configure the active CSS class applied when an item is selected.",
