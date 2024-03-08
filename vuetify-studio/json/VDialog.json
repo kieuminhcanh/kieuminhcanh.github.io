@@ -1,0 +1,110 @@
+[
+  {
+    "name": "v-row",
+    "props": {
+      "align": "center",
+      "justify": "center",
+      "class": "h-100"
+    },
+    "slots": {
+      "default": [
+        {
+          "name": "v-col",
+          "props": {
+            "cols": "12",
+            "sm": "8",
+            "md": "6"
+          },
+          "slots": {
+            "default": [
+              {
+                "name": "v-card",
+                "props": {
+                  "title": "Dialog"
+                },
+                "slots": {
+                  "default": [
+                    {
+                      "name": "v-divider"
+                    },
+                    {
+                      "name": "v-card-item",
+                      "slots": {
+                        "default": [
+                          {
+                            "name": "v-btn",
+                            "props": {
+                              "color": "primary"
+                            },
+                            "events": [
+                              {
+                                "name": "click",
+                                "statements": "dialog=!dialog"
+                              }
+                            ],
+                            "slots": {
+                              "default": "Open Dialog"
+                            }
+                          },
+                          {
+                            "name": "v-dialog",
+                            "props": {
+                              "width": "auto"
+                            },
+                            "model": {
+                              "key": "dialog",
+                              "value": false
+                            },
+                            "slots": {
+                              "default": [
+                                {
+                                  "name": "v-card",
+                                  "slots": {
+                                    "default": [
+                                      {
+                                        "name": "v-card-text",
+                                        "slots": {
+                                          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                        }
+                                      },
+                                      {
+                                        "name": "v-card-actions",
+                                        "slots": {
+                                          "default": [
+                                            {
+                                              "name": "v-btn",
+                                              "props": {
+                                                "color": "primary block"
+                                              },
+                                              "events": [
+                                                {
+                                                  "name": "click",
+                                                  "statements": "dialog=!dialog"
+                                                }
+                                              ],
+                                              "slots": {
+                                                "default": "Close Dialog"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

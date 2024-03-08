@@ -1,0 +1,35 @@
+[
+  {
+    "name": "v-container",
+    "props": {
+      "class": "bg-surface-variant mb-6"
+    },
+    "slots": {
+      "default": [
+        {
+          "name": "v-row",
+          "slots": {
+            "default": [
+              {
+                "name": "v-col",
+                "slots": {
+                  "default": [
+                    {
+                      "name": "v-sheet",
+                      "props": {
+                        "class": "pa-2 ma-2"
+                      },
+                      "slots": {
+                        "default": "Column"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,9 @@
+
+[
+  {
+    "name": "v-footer",
+    "slots": {
+      "default": "Footer 2023 Vuetify"
+    }
+  }
+]

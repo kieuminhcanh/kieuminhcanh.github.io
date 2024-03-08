@@ -1,0 +1,89 @@
+[
+  {
+    "name": "v-row",
+    "props": {
+      "align": "center",
+      "justify": "center",
+      "class": "h-100"
+    },
+    "slots": {
+      "default": [
+        {
+          "name": "v-col",
+          "props": {
+            "cols": "12",
+            "sm": "8",
+            "md": "6"
+          },
+          "slots": {
+            "default": [
+              {
+                "name": "v-card",
+                "props": {
+                  "title": "Carousel"
+                },
+                "slots": {
+                  "default": [
+                    {
+                      "name": "v-divider"
+                    },
+                    {
+                      "name": "v-card-item",
+                      "slots": {
+                        "default": [
+                          {
+                            "name": "v-carousel",
+                            "slots": {
+                              "default": [
+                                {
+                                  "name": "v-carousel-item",
+                                  "props": {
+                                    "src": "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+                                    "cover": true,
+                                    "key": "slide-1"
+                                  },
+                                  "slots": {
+                                    "default": [
+                                      {
+                                        "name": "v-sheet",
+                                        "props": {
+                                          "height": "100%",
+                                          "tile": true
+                                        },
+                                        "slots": {
+                                          "default": "Slide 1"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "name": "v-carousel-item",
+                                  "props": {
+                                    "src": "https://cdn.vuetifyjs.com/images/cards/hotel.jpg",
+                                    "cover": true
+                                  }
+                                },
+                                {
+                                  "name": "v-carousel-item",
+                                  "props": {
+                                    "src": "https://cdn.vuetifyjs.com/images/cards/sunshine.jpg",
+                                    "cover": true
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

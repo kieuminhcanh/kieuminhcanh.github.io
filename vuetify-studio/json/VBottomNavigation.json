@@ -1,0 +1,60 @@
+[
+  {
+    "name": "v-bottom-navigation",
+    "slots": {
+      "default": [
+        {
+          "name": "v-btn",
+          "props": {
+            "value": "recent"
+          },
+          "slots": {
+            "default": [
+              {
+                "name": "v-icon",
+                "slots": {
+                  "default": "mdi-history"
+                }
+              },
+              "Recent"
+            ]
+          }
+        },
+        {
+          "name": "v-btn",
+          "props": {
+            "value": "favorites"
+          },
+          "slots": {
+            "default": [
+              {
+                "name": "v-icon",
+                "slots": {
+                  "default": "mdi-heart"
+                }
+              },
+              "Favorites"
+            ]
+          }
+        },
+        {
+          "name": "v-btn",
+          "props": {
+            "value": "nearby"
+          },
+          "slots": {
+            "default": [
+              {
+                "name": "v-icon",
+                "slots": {
+                  "default": "mdi-map-marker"
+                }
+              },
+              "Nearby"
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

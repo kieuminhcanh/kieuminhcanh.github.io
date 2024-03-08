@@ -1,0 +1,67 @@
+[
+  {
+    "name": "v-row",
+    "props": {
+      "align": "center",
+      "justify": "center",
+      "class": "h-100"
+    },
+    "slots": {
+      "default": [
+        {
+          "name": "v-col",
+          "props": {
+            "cols": "12",
+            "sm": "8",
+            "md": "6"
+          },
+          "slots": {
+            "default": [
+              {
+                "name": "v-card",
+                "props": {
+                  "title": "Expansion Panels"
+                },
+                "slots": {
+                  "default": [
+                    {
+                      "name": "v-divider"
+                    },
+                    {
+                      "name": "v-card-item",
+                      "slots": {
+                        "default": [
+                          {
+                            "name": "v-expansion-panels",
+                            "slots": {
+                              "default": [
+                                {
+                                  "name": "v-expansion-panel",
+                                  "props": {
+                                    "title": "Title 1",
+                                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima"
+                                  }
+                                },
+                                {
+                                  "name": "v-expansion-panel",
+                                  "props": {
+                                    "title": "Title 2",
+                                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

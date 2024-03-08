@@ -1,0 +1,81 @@
+[
+  {
+    "name": "v-row",
+    "props": {
+      "align": "center",
+      "justify": "center",
+      "class": "h-100"
+    },
+    "slots": {
+      "default": [
+        {
+          "name": "v-col",
+          "props": {
+            "cols": "12",
+            "sm": "8",
+            "md": "6"
+          },
+          "slots": {
+            "default": [
+              {
+                "name": "v-card",
+                "props": {
+                  "title": "Radio Group"
+                },
+                "slots": {
+                  "default": [
+                    {
+                      "name": "v-divider"
+                    },
+                    {
+                      "name": "v-card-item",
+                      "slots": {
+                        "default": [
+                          {
+                            "name": "v-radio-group",
+                            "model": {
+                              "key": "radioGroup",
+                              "value": "1"
+                            },
+                            "slots": {
+                              "default": [
+                                {
+                                  "name": "v-radio",
+                                  "props": {
+                                    "label": "Radio 1",
+                                    "value": "1"
+                                  },
+                                  "slots": {}
+                                },
+                                {
+                                  "name": "v-radio",
+                                  "props": {
+                                    "label": "Radio 2",
+                                    "value": "2"
+                                  },
+                                  "slots": {}
+                                },
+                                {
+                                  "name": "v-radio",
+                                  "props": {
+                                    "label": "Radio 3",
+                                    "value": "3"
+                                  },
+                                  "slots": {}
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]
