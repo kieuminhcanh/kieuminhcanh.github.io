@@ -91,7 +91,7 @@ Core team member of Vuetify and creator of Vuetify Studio, its visual UI design 
 
 `Vue` `Vuetify` `Open Source`
 
-[Open Studio →](https://studio.vuetifyjs.com/)
+[Open Studio](https://studio.vuetifyjs.com/)
 
 </div>
 
@@ -105,7 +105,7 @@ The admin dashboard for the Saturn Cloud platform, built across frontend, backen
 
 `Full-stack` `Dashboard` `Cloud`
 
-[Visit site →](https://saturncloud.io/)
+[Visit site](https://saturncloud.io/)
 
 </div>
 
@@ -119,7 +119,7 @@ A Chrome extension that translates text as you type, powered by Google Gemini.
 
 `Chrome Extension` `AI` `Gemini`
 
-[Add to Chrome →](https://chromewebstore.google.com/detail/mdbpmkfbjjmhckennjmcfjjkggejgkdn)
+[Add to Chrome](https://chromewebstore.google.com/detail/mdbpmkfbjjmhckennjmcfjjkggejgkdn)
 
 </div>
 
@@ -133,13 +133,13 @@ A distraction-free focus timer on the Microsoft Store.
 
 `Windows App` `Productivity` `Free`
 
-[Get the app →](https://apps.microsoft.com/detail/9p2hprwrn6fb)
+[Get the app](https://apps.microsoft.com/detail/9p2hprwrn6fb)
 
 </div>
 
 </div>
 
-<p class="proj-more"><a href="/projects">See all projects →</a></p>
+<p class="proj-more"><a href="/projects">See all projects</a></p>
 
 </div>
 
@@ -151,9 +151,9 @@ Got a product problem to solve? I'd love to hear about it.
 
 <div class="contact-links">
 
-[✉️ Email](mailto:minhcanhdn0704@gmail.com) ·
-[💻 GitHub](https://github.com/kieuminhcanh) ·
-[💼 LinkedIn](https://www.linkedin.com/in/kieuminhcanh) ·
+[✉️ Email](mailto:minhcanhdn0704@gmail.com)
+[💻 GitHub](https://github.com/kieuminhcanh)
+[💼 LinkedIn](https://www.linkedin.com/in/kieuminhcanh)
 [🐦 X](https://twitter.com/kieuminhcanh)
 
 </div>

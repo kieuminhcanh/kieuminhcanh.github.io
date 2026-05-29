@@ -164,15 +164,19 @@
 
 .vp-doc a {
   font-weight: 500;
+  text-decoration: none;
   text-underline-offset: 3px;
   transition: color 0.15s ease;
 }
+.vp-doc a:hover {
+  text-decoration: underline;
+}
 
-/* Tech tags written as inline `code` on project lines */
+/* Tech tags written as inline `code` — quiet outlined pills. */
 .vp-doc p > code {
   display: inline-block;
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
+  background: transparent;
+  color: var(--vp-c-text-2);
   border: 1px solid var(--vp-c-divider);
   border-radius: 999px;
   padding: 2px 10px;
@@ -310,17 +314,52 @@
   padding-top: 4px;
 }
 
-/* Pin the link to the bottom; keep it tidy and never overflow the card. */
+/* Pin the link to the bottom as a full-width outlined CTA button. */
+.proj-card p:last-child {
+  margin-top: 16px;
+}
 .proj-card p:last-child a {
-  display: inline-block;
-  max-width: 100%;
+  display: block;
+  width: 100%;
+  padding: 8px 14px;
   font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--vp-c-brand-1);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+.proj-card p:last-child a:hover {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  text-decoration: none;
 }
 
 .proj-more {
-  margin-top: 24px;
+  margin-top: 48px;
   text-align: center;
+}
+.proj-more a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  padding: 12px 48px;
   font-weight: 600;
+  text-transform: capitalize;
+  color: var(--vp-c-text-1);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.proj-more a:hover {
+  color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  text-decoration: none;
 }
 
 /* Contact */
@@ -344,13 +383,39 @@
 }
 
 .contact-links {
-  margin-top: 16px;
-  font-size: 1.05rem;
+  margin-top: 24px;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
+/* The links are wrapped in a <p> by the markdown renderer. */
+.contact-links p {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
 .contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
   white-space: nowrap;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.contact-links a:hover {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  transform: translateY(-2px);
+  text-decoration: none;
 }
 
 /* ---------------------------------------------------------------- *

@@ -7,8 +7,8 @@ const { lang } = useData()
 
 const items = computed(() =>
   lang.value.startsWith('vi')
-    ? ['Core team Vuetify', '18 năm full-stack', 'Được dùng khắp cộng đồng Vue']
-    : ['Vuetify core team', '18 years full-stack', 'Used across the Vue ecosystem'],
+    ? ['Core team Vuetify', '18+ năm full-stack', 'Được dùng khắp cộng đồng Vue']
+    : ['Vuetify core team', '18+ years full-stack', 'Used across the Vue ecosystem'],
 )
 </script>
 

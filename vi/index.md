@@ -91,7 +91,7 @@ Thành viên core team của Vuetify và là người tạo ra Vuetify Studio �
 
 `Vue` `Vuetify` `Open Source`
 
-[Mở Studio →](https://studio.vuetifyjs.com/)
+[Mở Studio](https://studio.vuetifyjs.com/)
 
 </div>
 
@@ -105,7 +105,7 @@ Trang quản trị cho nền tảng Saturn Cloud, làm xuyên suốt từ fronte
 
 `Full-stack` `Dashboard` `Cloud`
 
-[Ghé thăm →](https://saturncloud.io/)
+[Ghé thăm](https://saturncloud.io/)
 
 </div>
 
@@ -119,7 +119,7 @@ Tiện ích Chrome dịch văn bản ngay khi bạn gõ, dùng Google Gemini.
 
 `Chrome Extension` `AI` `Gemini`
 
-[Thêm vào Chrome →](https://chromewebstore.google.com/detail/mdbpmkfbjjmhckennjmcfjjkggejgkdn)
+[Thêm vào Chrome](https://chromewebstore.google.com/detail/mdbpmkfbjjmhckennjmcfjjkggejgkdn)
 
 </div>
 
@@ -133,13 +133,13 @@ Tiện ích Chrome dịch văn bản ngay khi bạn gõ, dùng Google Gemini.
 
 `Windows App` `Productivity` `Free`
 
-[Tải ứng dụng →](https://apps.microsoft.com/detail/9p2hprwrn6fb)
+[Tải ứng dụng](https://apps.microsoft.com/detail/9p2hprwrn6fb)
 
 </div>
 
 </div>
 
-<p class="proj-more"><a href="/vi/projects">Xem tất cả dự án →</a></p>
+<p class="proj-more"><a href="/vi/projects">Xem tất cả dự án</a></p>
 
 </div>
 
@@ -151,9 +151,9 @@ Bạn có bài toán sản phẩm cần giải? Mình rất muốn nghe về nó
 
 <div class="contact-links">
 
-[✉️ Email](mailto:minhcanhdn0704@gmail.com) ·
-[💻 GitHub](https://github.com/kieuminhcanh) ·
-[💼 LinkedIn](https://www.linkedin.com/in/kieuminhcanh) ·
+[✉️ Email](mailto:minhcanhdn0704@gmail.com)
+[💻 GitHub](https://github.com/kieuminhcanh)
+[💼 LinkedIn](https://www.linkedin.com/in/kieuminhcanh)
 [🐦 X](https://twitter.com/kieuminhcanh)
 
 </div>
