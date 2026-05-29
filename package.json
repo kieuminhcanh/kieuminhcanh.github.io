@@ -5,6 +5,11 @@
     "preview": "vitepress preview"
   },
   "dependencies": {
+    "@vueuse/motion": "^3.0.3",
     "vitepress": "^2.0.0-alpha.17"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "satori": "^0.26.0"
   }
 }
