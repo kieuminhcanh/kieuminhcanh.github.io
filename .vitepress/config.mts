@@ -5,6 +5,12 @@ const SITE_URL = 'https://kieuminhcanh.github.io'
 const SITE_TITLE = 'Canh Minh Kieu — Full-stack Developer'
 const SITE_DESC = 'Full-stack developer · 18+ years building web products end-to-end'
 const SITE_OG_IMAGE = `${SITE_URL}/og.png`
+const PERSON_IMAGE = 'https://github.com/kieuminhcanh.png'
+const SAME_AS = [
+  'https://github.com/kieuminhcanh',
+  'https://twitter.com/kieuminhcanh',
+  'https://www.linkedin.com/in/kieuminhcanh',
+]
 
 // Per-locale Open Graph / Twitter metadata, injected via transformHead.
 const OG_META: Record<string, { title: string; desc: string }> = {
@@ -19,7 +25,21 @@ const OG_META: Record<string, { title: string; desc: string }> = {
 export default defineConfig({
   title: "Canh Minh Kieu — Full-stack Developer",
   description: SITE_DESC,
-  sitemap: { hostname: SITE_URL },
+  sitemap: {
+    hostname: SITE_URL,
+    transformItems(items) {
+      // Weight URLs by importance so crawlers prioritise the home/projects
+      // pages over legal/policy content.
+      const rank = (url: string): { priority: number; changefreq: 'weekly' | 'monthly' | 'yearly' } => {
+        const path = url.replace(/^\/(vi\/)?/, '/')
+        if (path === '/') return { priority: 1.0, changefreq: 'weekly' }
+        if (path === '/projects.html') return { priority: 0.8, changefreq: 'weekly' }
+        if (path.startsWith('/policies/')) return { priority: 0.3, changefreq: 'yearly' }
+        return { priority: 0.5, changefreq: 'monthly' }
+      }
+      return items.map((item) => ({ ...item, ...rank(`/${item.url.replace(/^\//, '')}`) }))
+    },
+  },
   head: [
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
@@ -39,12 +59,47 @@ export default defineConfig({
     const lang = pageData.frontmatter.lang || siteData.lang
     const og = OG_META[lang] ?? OG_META['en-US']
     const url = `${SITE_URL}/${pageData.relativePath.replace(/(index)?\.md$/, '')}`
+
+    // Structured data graph: links Person <-> WebSite so search engines can
+    // build a rich knowledge panel from a single source of truth.
+    const personName = lang.startsWith('vi') ? 'Kiều Minh Cảnh' : 'Canh Minh Kieu'
+    const ldGraph = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'Person',
+          '@id': `${SITE_URL}/#person`,
+          name: personName,
+          alternateName: ['Canh Minh Kieu', 'Kiều Minh Cảnh'],
+          url: SITE_URL,
+          image: PERSON_IMAGE,
+          jobTitle: 'Full-stack Developer',
+          description: og.desc,
+          sameAs: SAME_AS,
+          knowsAbout: ['Vue.js', 'Vuetify', 'TypeScript', 'Full-stack web development'],
+        },
+        {
+          '@type': 'WebSite',
+          '@id': `${SITE_URL}/#website`,
+          url: SITE_URL,
+          name: og.title,
+          description: og.desc,
+          inLanguage: lang,
+          author: { '@id': `${SITE_URL}/#person` },
+          publisher: { '@id': `${SITE_URL}/#person` },
+        },
+      ],
+    }
+
     return [
       ['meta', { property: 'og:title', content: og.title }],
       ['meta', { property: 'og:description', content: og.desc }],
       ['meta', { property: 'og:url', content: url }],
+      ['meta', { property: 'og:locale', content: lang.replace('-', '_') }],
       ['meta', { name: 'twitter:title', content: og.title }],
       ['meta', { name: 'twitter:description', content: og.desc }],
+      ['link', { rel: 'canonical', href: url }],
+      ['script', { type: 'application/ld+json' }, JSON.stringify(ldGraph)],
     ]
   },
   locales: {

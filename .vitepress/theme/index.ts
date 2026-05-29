@@ -3,6 +3,7 @@ import { h } from 'vue'
 import { MotionPlugin } from '@vueuse/motion'
 import EventBadgeHero from './components/EventBadgeHero.vue'
 import HeroTrust from './components/HeroTrust.vue'
+import MainLandmark from './components/MainLandmark.vue'
 import './custom.css'
 
 export default {
@@ -14,6 +15,7 @@ export default {
     return h(DefaultTheme.Layout, null, {
       'home-hero-image': () => h(EventBadgeHero),
       'home-hero-actions-after': () => h(HeroTrust),
+      'layout-top': () => h(MainLandmark),
     })
   },
 }
