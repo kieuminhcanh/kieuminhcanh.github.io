@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
+import { useData } from 'vitepress'
 
 /**
  * Event-badge card built with plain HTML — name, title, handle and a GitHub
@@ -14,10 +15,17 @@ const props = withDefaults(defineProps<{
   github?: string
 }>(), {
   name: 'Kieu Minh Canh',
-  title: 'Full-stack Developer',
+  title: '',
   handle: '@kieuminhcanh',
   github: 'kieuminhcanh',
 })
+
+const { lang } = useData()
+
+// Fall back to a locale-aware default when no title prop is given.
+const title = computed(() =>
+  props.title || (lang.value.startsWith('vi') ? 'Lập trình viên Full-stack' : 'Full-stack Developer'),
+)
 
 const initials = props.name.split(' ').map(s => s[0]).slice(0, 2).join('')
 const avatarOk = ref(true)

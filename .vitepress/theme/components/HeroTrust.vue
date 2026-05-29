@@ -1,10 +1,15 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useData } from 'vitepress'
+
 // Trust signals shown under the hero CTAs to build credibility at first glance.
-const items = [
-  'Vuetify core team',
-  '18 years full-stack',
-  'Used across the Vue ecosystem',
-]
+const { lang } = useData()
+
+const items = computed(() =>
+  lang.value.startsWith('vi')
+    ? ['Core team Vuetify', '18 năm full-stack', 'Được dùng khắp cộng đồng Vue']
+    : ['Vuetify core team', '18 years full-stack', 'Used across the Vue ecosystem'],
+)
 </script>
 
 <template>
@@ -38,5 +43,12 @@ const items = [
   margin: 0 10px;
   color: var(--vp-c-brand-1);
   opacity: 0.7;
+}
+
+/* Center under the hero text when the layout stacks (matches name/tagline). */
+@media (max-width: 959px) {
+  .hero-trust {
+    justify-content: center;
+  }
 }
 </style>
