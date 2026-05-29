@@ -33,6 +33,16 @@ These days I split my time between building full-stack products end-to-end and c
 
 <div class="skill-card">
 
+### 🤖 AI
+
+Building AI-powered features into real products — from integration to UX.
+
+`LLM` `RAG` `AI Agents` `Prompt Engineering` `Embeddings`
+
+</div>
+
+<div class="skill-card">
+
 ### 🎨 Frontend
 
 Modern, high-performance interfaces with a strong focus on UX.
@@ -48,16 +58,6 @@ Modern, high-performance interfaces with a strong focus on UX.
 Scalable APIs, data models, and business logic.
 
 `Node.js` `Laravel` `Supabase` `Firebase` `REST` `Databases`
-
-</div>
-
-<div class="skill-card">
-
-### 🚀 Infra & DevOps
-
-Deployment, CI/CD, and process automation.
-
-`Docker` `CI/CD` `Vite`
 
 </div>
 

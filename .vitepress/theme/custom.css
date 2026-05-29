@@ -46,6 +46,43 @@
   );
 }
 
+/* Align the hero container with the nav: same max-width and 32px gutters
+   (nav uses calc(var(--vp-layout-max-width) - 64px) centered, gutter 32px). */
+.VPHero .container {
+  max-width: calc(var(--vp-layout-max-width) - 64px);
+  padding: 0 32px;
+}
+
+/* Split the hero 3/4 (text) - 1/4 (badge) on desktop.
+   Prefix with .VPHome to beat VitePress's scoped [data-v-*] selectors. */
+@media (min-width: 960px) {
+  /* Roomier gap between the text and badge columns. */
+  .VPHome .VPHero.has-image .container {
+    gap: 64px;
+  }
+  .VPHome .VPHero.has-image .main {
+    flex: 1 1 0;
+    max-width: none;
+  }
+  .VPHome .VPHero.has-image .image {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  /* Let the badge fill its 25% column instead of the fixed default size. */
+  .VPHome .VPHero.has-image .image-container {
+    width: 100%;
+    transform: none;
+  }
+}
+
+/* Let the heading + tagline span the full text column width. */
+.VPHero .heading,
+.VPHero .name,
+.VPHero .text,
+.VPHero .tagline {
+  max-width: none;
+}
+
 .VPHero .name {
   font-size: clamp(2.4rem, 6vw, 4rem);
   letter-spacing: -0.02em;
@@ -57,7 +94,6 @@
 }
 
 .VPHero .tagline {
-  max-width: 640px;
   line-height: 1.6;
   opacity: 0.9;
 }
@@ -154,10 +190,11 @@
 /* ---------------------------------------------------------------- *
  * Home — extra sections rendered below hero/features
  * ---------------------------------------------------------------- */
+/* Match the nav container so sections line up with the navbar edges. */
 .VPHome .vp-doc {
-  max-width: 1152px;
+  max-width: calc(var(--vp-layout-max-width) - 64px);
   margin: 0 auto;
-  padding: 0 24px 64px;
+  padding: 0 32px 64px;
 }
 
 .home-section {
@@ -183,11 +220,24 @@
 }
 
 /* Skills grid */
+/* Responsive card grid: 1 col (mobile) -> 2 (tablet) -> 4 (desktop). */
 .skills-grid,
 .proj-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: 1fr;
   gap: 18px;
+}
+@media (min-width: 640px) {
+  .skills-grid,
+  .proj-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 960px) {
+  .skills-grid,
+  .proj-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .skill-card,
@@ -321,6 +371,10 @@
   .VPHome .VPHero .image .badge-hero {
     min-height: 320px;
     transform: scale(0.85);
+  }
+  /* Breathing room so the badge doesn't sit on top of the tagline. */
+  .VPHome .VPHero.has-image .image {
+    margin-bottom: 32px;
   }
 }
 
