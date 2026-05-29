@@ -14,20 +14,24 @@ const props = withDefaults(defineProps<{
   handle?: string
   github?: string
 }>(), {
-  name: 'Kieu Minh Canh',
+  name: '',
   title: '',
   handle: '@kieuminhcanh',
   github: 'kieuminhcanh',
 })
 
 const { lang } = useData()
+const isVi = computed(() => lang.value.startsWith('vi'))
 
-// Fall back to a locale-aware default when no title prop is given.
+// Locale-aware defaults when no prop is given.
+const name = computed(() =>
+  props.name || (isVi.value ? 'Kiều Minh Cảnh' : 'Canh Minh Kieu'),
+)
 const title = computed(() =>
-  props.title || (lang.value.startsWith('vi') ? 'Lập trình viên Full-stack' : 'Full-stack Developer'),
+  props.title || (isVi.value ? 'Lập trình viên Full-stack' : 'Full-stack Developer'),
 )
 
-const initials = props.name.split(' ').map(s => s[0]).slice(0, 2).join('')
+const initials = computed(() => name.value.split(' ').map(s => s[0]).slice(0, 2).join(''))
 const avatarOk = ref(true)
 
 // Pointer-driven 3D tilt.

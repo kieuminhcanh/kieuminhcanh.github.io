@@ -75,12 +75,14 @@
   }
 }
 
-/* Let the heading + tagline span the full text column width. */
+/* Let the heading + tagline span the full text column width,
+   with balanced wrapping for tidier line breaks. */
 .VPHero .heading,
 .VPHero .name,
 .VPHero .text,
 .VPHero .tagline {
   max-width: none;
+  text-wrap: balance;
 }
 
 .VPHero .name {
@@ -96,6 +98,14 @@
 .VPHero .tagline {
   line-height: 1.6;
   opacity: 0.9;
+}
+
+/* Round the GitHub avatar used as the navbar logo. */
+.VPNavBarTitle .logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* Ambient glow behind the hero */

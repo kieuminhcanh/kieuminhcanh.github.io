@@ -11,9 +11,9 @@ import { Resvg } from '@resvg/resvg-js'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
 
-const NAME = 'Kieu Minh Canh'
+const NAME = 'Canh Minh Kieu'
 const ROLE = 'Full-stack Developer'
-const TAGLINE = '18+ years building web products end-to-end · Vuetify core team'
+const TAGLINE = '18+ years building web products end-to-end'
 const HANDLE = '@kieuminhcanh'
 const BRAND = '#42b883'
 

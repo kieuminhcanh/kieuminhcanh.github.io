@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 const SITE_URL = 'https://kieuminhcanh.github.io'
-const SITE_TITLE = 'Kieu Minh Canh — Full-stack Developer'
+const SITE_TITLE = 'Canh Minh Kieu — Full-stack Developer'
 const SITE_DESC = 'Full-stack developer · 18+ years building web products end-to-end'
 const SITE_OG_IMAGE = `${SITE_URL}/og.png`
 
@@ -10,14 +10,14 @@ const SITE_OG_IMAGE = `${SITE_URL}/og.png`
 const OG_META: Record<string, { title: string; desc: string }> = {
   'en-US': { title: SITE_TITLE, desc: SITE_DESC },
   'vi-VN': {
-    title: 'Kieu Minh Canh — Lập trình viên Full-stack',
+    title: 'Kiều Minh Cảnh — Lập trình viên Full-stack',
     desc: 'Lập trình viên full-stack · hơn 18 năm xây dựng sản phẩm web từ đầu đến cuối',
   },
 }
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Kieu Minh Canh",
+  title: "Canh Minh Kieu — Full-stack Developer",
   description: SITE_DESC,
   sitemap: { hostname: SITE_URL },
   head: [
@@ -25,10 +25,10 @@ export default defineConfig({
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap' }],
     ['meta', { name: 'theme-color', content: '#42b883' }],
-    ['meta', { name: 'author', content: 'Kieu Minh Canh' }],
+    ['meta', { name: 'author', content: 'Canh Minh Kieu' }],
     // Open Graph (title/description injected per-locale via transformHead)
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:site_name', content: 'Kieu Minh Canh' }],
+    ['meta', { property: 'og:site_name', content: 'Canh Minh Kieu' }],
     ['meta', { property: 'og:image', content: SITE_OG_IMAGE }],
     // Twitter / X
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
@@ -52,6 +52,8 @@ export default defineConfig({
       label: 'English',
       lang: 'en-US',
       themeConfig: {
+        logo: 'https://github.com/kieuminhcanh.png',
+        siteTitle: 'Canh Minh Kieu',
         nav: [
           { text: 'Home', link: '/' },
           { text: 'Projects', link: '/projects' },
@@ -72,7 +74,10 @@ export default defineConfig({
       label: 'Tiếng Việt',
       lang: 'vi-VN',
       link: '/vi/',
+      title: 'Kiều Minh Cảnh — Lập trình viên Full-stack',
       themeConfig: {
+        logo: 'https://github.com/kieuminhcanh.png',
+        siteTitle: 'Kiều Minh Cảnh',
         nav: [
           { text: 'Trang chủ', link: '/vi/' },
           { text: 'Dự án', link: '/vi/projects' },
