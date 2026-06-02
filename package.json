@@ -5,6 +5,7 @@
     "preview": "vitepress preview"
   },
   "dependencies": {
+    "@vueuse/core": "^14.3.0",
     "@vueuse/motion": "^3.0.3",
     "vitepress": "^2.0.0-alpha.17"
   },

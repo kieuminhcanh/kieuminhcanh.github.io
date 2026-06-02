@@ -18,10 +18,16 @@
   --hero-grad-3: #1867c0;
 }
 
+/* Dark, slim.vn-style canvas (site is forced dark via appearance config). */
 .dark {
-  --vp-c-bg: #0b0e12;
-  --vp-c-bg-alt: #0f141a;
-  --vp-c-bg-soft: #141b22;
+  --vp-c-bg: #0a0d11;
+  --vp-c-bg-alt: #0e1218;
+  --vp-c-bg-soft: #131a21;
+  --vp-c-bg-elv: #131a21;
+  --vp-c-text-1: #e8edf2;
+  --vp-c-text-2: #9aa6b2;
+  --vp-c-divider: rgba(255, 255, 255, 0.09);
+  --vp-c-border: rgba(255, 255, 255, 0.12);
 }
 
 /* ---------------------------------------------------------------- *
@@ -44,6 +50,41 @@
     var(--hero-grad-1) 10%,
     var(--hero-grad-3) 90%
   );
+}
+
+/* Hero + marquee fill the first viewport (slim.vn-style full-height intro).
+   .VPHero (hero) and .marquee (home-hero-after slot) are both direct children
+   of .VPHome; a min-height first-screen flex column centers the hero and pins
+   the marquee to the bottom edge. */
+.VPHome {
+  /* Height reserved for the marquee strip so hero + marquee share one screen. */
+  --marquee-h: 64px;
+  display: flex;
+  flex-direction: column;
+}
+
+.VPHome > .VPHero {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* VPHero already has a negative top margin equal to the nav height. Subtract
+     the marquee height so the hero AND marquee both fit in the first screen.
+     svh tracks the *small* viewport so mobile address bars don't clip it;
+     vh is the fallback for browsers without svh support. */
+  min-height: calc(100vh - var(--marquee-h));
+  min-height: calc(100svh - var(--marquee-h));
+  padding-bottom: 0;
+}
+
+/* The hero's own .container should not stretch; keep it centered. */
+.VPHome > .VPHero > .container {
+  flex: 0 0 auto;
+}
+
+/* Marquee sits flush at the bottom of the first screen. */
+.VPHome > .marquee {
+  flex: 0 0 auto;
 }
 
 /* Align the hero container with the nav: same max-width and 32px gutters
@@ -215,12 +256,78 @@
   margin-top: 64px;
 }
 
+/* ---------------------------------------------------------------- *
+ * Scroll reveal — sections fade/rise into view (slim.vn style).
+ * Class toggling is driven by ScrollReveal.vue's IntersectionObserver.
+ * ---------------------------------------------------------------- */
+.home-section.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.home-section.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger the cards within a revealed section for a cascading entrance. */
+.home-section.reveal .skill-card,
+.home-section.reveal .proj-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.home-section.reveal.is-visible .skill-card,
+.home-section.reveal.is-visible .proj-card {
+  opacity: 1;
+  transform: none;
+}
+.home-section.reveal.is-visible .skill-card:nth-child(1),
+.home-section.reveal.is-visible .proj-card:nth-child(1) { transition-delay: 0.05s; }
+.home-section.reveal.is-visible .skill-card:nth-child(2),
+.home-section.reveal.is-visible .proj-card:nth-child(2) { transition-delay: 0.13s; }
+.home-section.reveal.is-visible .skill-card:nth-child(3),
+.home-section.reveal.is-visible .proj-card:nth-child(3) { transition-delay: 0.21s; }
+.home-section.reveal.is-visible .skill-card:nth-child(4),
+.home-section.reveal.is-visible .proj-card:nth-child(4) { transition-delay: 0.29s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .home-section.reveal,
+  .home-section.reveal .skill-card,
+  .home-section.reveal .proj-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 .home-section > h2 {
   border-top: none;
   padding-top: 0;
   margin-bottom: 24px;
-  font-size: 1.7rem;
+  font-size: clamp(1.7rem, 3.4vw, 2.4rem);
   letter-spacing: -0.02em;
+}
+
+/* Mono eyebrow label above each section heading (slim.vn style). */
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px;
+  font-family: var(--vp-font-family-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--vp-c-brand-1);
+}
+.section-eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: var(--vp-c-brand-1);
 }
 
 .home-section > h2::after {
@@ -252,6 +359,31 @@
   .proj-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+/* Numbered service grid (3 columns, slim.vn "01 02 03" layout). */
+@media (min-width: 720px) {
+  .skills-grid.numbered {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skills-grid.numbered .skill-card {
+  padding-top: 26px;
+}
+
+.card-num {
+  display: block;
+  margin-bottom: 14px;
+  font-family: var(--vp-font-family-mono);
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: transparent;
+  background: linear-gradient(120deg, var(--hero-grad-1), var(--hero-grad-3));
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .skill-card,
@@ -365,12 +497,18 @@
 /* Contact */
 .home-contact {
   text-align: center;
-  padding: 40px 24px;
+  padding: 48px 24px;
   border: 1px solid var(--vp-c-divider);
   border-radius: 16px;
   background:
     radial-gradient(circle at 50% 0%, var(--vp-c-brand-soft), transparent 70%),
     var(--vp-c-bg-soft);
+}
+
+.home-contact .section-eyebrow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .home-contact > h2 {
@@ -380,6 +518,87 @@
 .home-contact > h2::after {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Mono-label contact rows (E_ G_ L_ X_), slim.vn style. */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 520px;
+  margin: 32px auto 0;
+  text-align: left;
+}
+@media (min-width: 640px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 40px;
+  }
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 12px;
+  margin: 0 -12px;
+  border-radius: 12px;
+  border-bottom: 1px solid var(--vp-c-divider);
+  text-decoration: none;
+  transition: background 0.18s ease;
+}
+.contact-row:hover,
+.vp-doc .contact-row:hover {
+  background: var(--vp-c-brand-soft);
+  text-decoration: none;
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  border: 1px solid var(--vp-c-divider);
+  transition: border-color 0.18s ease;
+}
+.contact-row:hover .contact-icon {
+  border-color: var(--vp-c-brand-1);
+}
+.contact-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.contact-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.contact-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-2);
+}
+
+.contact-value {
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color 0.18s ease;
+}
+.contact-row:hover .contact-value {
+  color: var(--vp-c-brand-1);
 }
 
 .contact-links {

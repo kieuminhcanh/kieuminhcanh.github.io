@@ -52,4 +52,4 @@ A simple **focus timer** app on the Microsoft Store to help you stay productive.
 
 ---
 
-> More projects are being added. Reach out at [minhcanhdn0704@gmail.com](mailto:minhcanhdn0704@gmail.com) to chat.
+> More projects are being added. [Get in touch](/#contact) to chat.

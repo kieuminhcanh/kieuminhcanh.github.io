@@ -52,4 +52,4 @@ Tiện ích Chrome dịch văn bản **ngay khi bạn gõ**, dùng Google Gemini
 
 ---
 
-> Mình vẫn đang thêm dự án mới. Liên hệ qua [minhcanhdn0704@gmail.com](mailto:minhcanhdn0704@gmail.com) để trò chuyện nhé.
+> Mình vẫn đang thêm dự án mới. [Liên hệ](/vi/#contact) để trò chuyện nhé.

@@ -25,4 +25,4 @@ Chúng tôi có thể cập nhật Chính sách bảo mật này theo thời gia
 
 ### 4. Thông tin liên hệ
 
-Nếu bạn có thắc mắc về Chính sách bảo mật này, vui lòng liên hệ <minhcanhdn0704@gmail.com> hoặc qua trang niêm yết trên Chrome Web Store.
+Nếu bạn có thắc mắc về Chính sách bảo mật này, vui lòng liên hệ <ObfuscatedEmail /> hoặc qua trang niêm yết trên Chrome Web Store.

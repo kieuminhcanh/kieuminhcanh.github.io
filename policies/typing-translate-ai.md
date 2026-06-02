@@ -25,4 +25,4 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
 
 ### 4. Contact Information
 
-If you have any questions about this Privacy Policy, please contact <minhcanhdn0704@gmail.com> or via the Chrome Web Store listing page.
+If you have any questions about this Privacy Policy, please contact <ObfuscatedEmail /> or via the Chrome Web Store listing page.

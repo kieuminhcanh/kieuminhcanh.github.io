@@ -25,6 +25,8 @@ const OG_META: Record<string, { title: string; desc: string }> = {
 export default defineConfig({
   title: "Canh Minh Kieu — Full-stack Developer",
   description: SITE_DESC,
+  // Force dark, slim.vn-style appearance (no light/dark toggle).
+  appearance: 'force-dark',
   sitemap: {
     hostname: SITE_URL,
     transformItems(items) {

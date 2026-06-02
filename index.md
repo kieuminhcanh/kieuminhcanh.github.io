@@ -12,7 +12,7 @@ hero:
       link: /projects
     - theme: alt
       text: Start a project
-      link: mailto:minhcanhdn0704@gmail.com
+      link: '#contact'
 ---
 
 <div class="home-section">
@@ -27,25 +27,21 @@ These days I split my time between building full-stack products end-to-end and c
 
 <div class="home-section">
 
-## What I do {#skills}
+<p class="section-eyebrow">What I do</p>
 
-<div class="skills-grid">
+## How I can help you {#skills}
 
-<div class="skill-card">
+Full-stack delivery built on strategic thinking, deep engineering, and a partner's mindset.
 
-### 🤖 AI
-
-Building AI-powered features into real products — from integration to UX.
-
-`LLM` `RAG` `AI Agents` `Prompt Engineering` `Embeddings`
-
-</div>
+<div class="skills-grid numbered">
 
 <div class="skill-card">
 
-### 🎨 Frontend
+<span class="card-num">01.</span>
 
-Modern, high-performance interfaces with a strong focus on UX.
+### 🎨 Frontend & Design Systems
+
+Modern, high-performance interfaces with a strong focus on UX — and the design systems that scale them.
 
 `Vue` `Vuetify` `Nuxt` `Nuxt UI` `TypeScript`
 
@@ -53,25 +49,41 @@ Modern, high-performance interfaces with a strong focus on UX.
 
 <div class="skill-card">
 
-### ⚙️ Backend
+<span class="card-num">02.</span>
 
-Scalable APIs, data models, and business logic.
+### ⚙️ Backend & Product
 
-`Node.js` `Laravel` `Supabase` `Firebase` `REST` `Databases`
+Scalable APIs, data models, and business logic — delivered end-to-end from idea to release.
+
+`Node.js` `Laravel` `Supabase` `Firebase` `Architecture`
 
 </div>
 
 <div class="skill-card">
 
-### 📦 Product
+<span class="card-num">03.</span>
 
-End-to-end delivery, from idea to release.
+### 🤖 AI Integration
 
-`Architecture` `DX` `Open Source`
+Building AI-powered features into real products — from integration to UX.
+
+`LLM` `RAG` `AI Agents` `Prompt Engineering` `Embeddings`
 
 </div>
 
 </div>
+
+</div>
+
+<div class="home-section">
+
+<p class="section-eyebrow">Methodology</p>
+
+## 18 years, six stages of craft {#journey}
+
+Click through each stage to see how the work — and the focus — has evolved.
+
+<JourneyLevels />
 
 </div>
 
@@ -145,17 +157,12 @@ A distraction-free focus timer on the Microsoft Store.
 
 <div class="home-section home-contact">
 
-## Let's work together {#contact}
+<p class="section-eyebrow">Let's connect</p>
+
+## It starts with a conversation. {#contact}
 
 Got a product problem to solve? I'd love to hear about it.
 
-<div class="contact-links">
-
-[✉️ Email](mailto:minhcanhdn0704@gmail.com)
-[💻 GitHub](https://github.com/kieuminhcanh)
-[💼 LinkedIn](https://www.linkedin.com/in/kieuminhcanh)
-[🐦 X](https://twitter.com/kieuminhcanh)
-
-</div>
+<ContactGrid />
 
 </div>

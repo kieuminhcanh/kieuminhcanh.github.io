@@ -12,7 +12,7 @@ hero:
       link: /vi/projects
     - theme: alt
       text: Bắt đầu một dự án
-      link: mailto:minhcanhdn0704@gmail.com
+      link: '#contact'
 ---
 
 <div class="home-section">
@@ -27,25 +27,21 @@ Dạo này mình chia thời gian giữa việc xây dựng sản phẩm full-st
 
 <div class="home-section">
 
-## Mình làm gì {#skills}
+<p class="section-eyebrow">Mình làm gì</p>
 
-<div class="skills-grid">
+## Mình có thể giúp bạn {#skills}
 
-<div class="skill-card">
+Bàn giao full-stack dựa trên tư duy chiến lược, năng lực kỹ thuật sâu và tinh thần đồng hành.
 
-### 🤖 AI
-
-Đưa tính năng AI vào sản phẩm thật — từ tích hợp đến UX.
-
-`LLM` `RAG` `AI Agents` `Prompt Engineering` `Embeddings`
-
-</div>
+<div class="skills-grid numbered">
 
 <div class="skill-card">
 
-### 🎨 Frontend
+<span class="card-num">01.</span>
 
-Giao diện hiện đại, hiệu năng cao, đặt UX lên hàng đầu.
+### 🎨 Frontend & Design System
+
+Giao diện hiện đại, hiệu năng cao, đặt UX lên hàng đầu — và design system giúp mở rộng chúng.
 
 `Vue` `Vuetify` `Nuxt` `Nuxt UI` `TypeScript`
 
@@ -53,25 +49,41 @@ Giao diện hiện đại, hiệu năng cao, đặt UX lên hàng đầu.
 
 <div class="skill-card">
 
-### ⚙️ Backend
+<span class="card-num">02.</span>
 
-API mở rộng được, mô hình dữ liệu và logic nghiệp vụ.
+### ⚙️ Backend & Sản phẩm
 
-`Node.js` `Laravel` `Supabase` `Firebase` `REST` `Databases`
+API mở rộng được, mô hình dữ liệu và logic nghiệp vụ — bàn giao trọn vẹn từ ý tưởng đến phát hành.
+
+`Node.js` `Laravel` `Supabase` `Firebase` `Architecture`
 
 </div>
 
 <div class="skill-card">
 
-### 📦 Sản phẩm
+<span class="card-num">03.</span>
 
-Bàn giao trọn vẹn, từ ý tưởng đến lúc phát hành.
+### 🤖 Tích hợp AI
 
-`Architecture` `DX` `Open Source`
+Đưa tính năng AI vào sản phẩm thật — từ tích hợp đến UX.
+
+`LLM` `RAG` `AI Agents` `Prompt Engineering` `Embeddings`
 
 </div>
 
 </div>
+
+</div>
+
+<div class="home-section">
+
+<p class="section-eyebrow">Phương pháp</p>
+
+## 18 năm, sáu chặng đường nghề {#journey}
+
+Bấm vào từng chặng để xem công việc — và trọng tâm — đã thay đổi ra sao.
+
+<JourneyLevels />
 
 </div>
 
@@ -145,17 +157,12 @@ Tiện ích Chrome dịch văn bản ngay khi bạn gõ, dùng Google Gemini.
 
 <div class="home-section home-contact">
 
-## Cùng làm việc nhé {#contact}
+<p class="section-eyebrow">Kết nối</p>
+
+## Bắt đầu từ một cuộc trò chuyện. {#contact}
 
 Bạn có bài toán sản phẩm cần giải? Mình rất muốn nghe về nó.
 
-<div class="contact-links">
-
-[✉️ Email](mailto:minhcanhdn0704@gmail.com)
-[💻 GitHub](https://github.com/kieuminhcanh)
-[💼 LinkedIn](https://www.linkedin.com/in/kieuminhcanh)
-[🐦 X](https://twitter.com/kieuminhcanh)
-
-</div>
+<ContactGrid />
 
 </div>
