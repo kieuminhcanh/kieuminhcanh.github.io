@@ -9,8 +9,6 @@ const SITE_OG_IMAGE = `${SITE_URL}/og.png`
 const PERSON_IMAGE = 'https://github.com/kieuminhcanh.png'
 const SAME_AS = [
   'https://github.com/kieuminhcanh',
-  'https://twitter.com/kieuminhcanh',
-  'https://www.linkedin.com/in/kieuminhcanh',
 ]
 
 // Per-locale Open Graph / Twitter metadata, injected via transformHead.
@@ -58,9 +56,8 @@ export default defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Canh Minh Kieu' }],
     ['meta', { property: 'og:image', content: SITE_OG_IMAGE }],
-    // Twitter / X
+    // Twitter card (link-preview format only; no X profile is linked)
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:site', content: '@kieuminhcanh' }],
     ['meta', { name: 'twitter:image', content: SITE_OG_IMAGE }],
   ],
   transformHead({ pageData, siteData }) {
@@ -170,9 +167,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/kieuminhcanh' },
-      { icon: 'x', link: 'https://twitter.com/kieuminhcanh' },
-      { icon: 'linkedin', link: 'https://www.linkedin.com/in/kieuminhcanh' }
+      { icon: 'github', link: 'https://github.com/kieuminhcanh' }
     ]
   }
 })
