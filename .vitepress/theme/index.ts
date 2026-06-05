@@ -1,32 +1,16 @@
-import DefaultTheme from 'vitepress/theme'
-import type { EnhanceAppContext } from 'vitepress'
-import { h } from 'vue'
+import type { Theme } from 'vitepress'
 import { MotionPlugin } from '@vueuse/motion'
-import EventBadgeHero from './components/EventBadgeHero.vue'
-import HeroTrust from './components/HeroTrust.vue'
-import MainLandmark from './components/MainLandmark.vue'
-import Marquee from './components/Marquee.vue'
-import JourneyLevels from './components/JourneyLevels.vue'
-import ScrollReveal from './components/ScrollReveal.vue'
-import ContactGrid from './components/ContactGrid.vue'
+import Layout from './Layout.vue'
 import ObfuscatedEmail from './components/ObfuscatedEmail.vue'
-import './custom.css'
+import './tailwind.css'
 
+// Fully custom theme — own Layout, no DefaultTheme. @vueuse/motion powers the
+// declarative micro-interactions; GSAP (via composables) drives scroll motion.
 export default {
-  extends: DefaultTheme,
-  enhanceApp({ app }: EnhanceAppContext) {
+  Layout,
+  enhanceApp({ app }) {
     app.use(MotionPlugin)
-    // Register components used inside markdown.
-    app.component('JourneyLevels', JourneyLevels)
-    app.component('ContactGrid', ContactGrid)
+    // Used inside policy markdown pages.
     app.component('ObfuscatedEmail', ObfuscatedEmail)
   },
-  Layout() {
-    return h(DefaultTheme.Layout, null, {
-      'home-hero-image': () => h(EventBadgeHero),
-      'home-hero-actions-after': () => h(HeroTrust),
-      'home-hero-after': () => h(Marquee),
-      'layout-top': () => [h(MainLandmark), h(ScrollReveal)],
-    })
-  },
-}
+} satisfies Theme

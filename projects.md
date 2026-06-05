@@ -1,12 +1,14 @@
 # Projects
 
-A selection of projects I'm currently working on and have completed.
+A selection of work — products I help build, services I run, and sites I've shipped for clients.
 
-## In progress
+## Products & open source
 
 ### Vuetify & Vuetify Studio
 
 Core team member of **[Vuetify](https://vuetifyjs.com)** — the Vue UI framework used across the ecosystem — and creator of **[Vuetify Studio](https://studio.vuetifyjs.com/)**, its visual UI design tooling.
+
+![Vuetify Studio](/vuetify-studio.png)
 
 - Contributing to the framework's core and developer experience.
 - Building tooling that helps teams design and ship Vuetify apps faster.
@@ -15,14 +17,60 @@ Core team member of **[Vuetify](https://vuetifyjs.com)** — the Vue UI framewor
 
 ### Admin Dashboard — Saturn Cloud
 
-Designing and building the admin dashboard for the **[Saturn Cloud](https://saturncloud.io/)** platform.
+Designed and built the admin dashboard for the **[Saturn Cloud](https://saturncloud.io/)** platform, working across frontend, backend, and infrastructure.
 
+![Saturn Cloud](/proj-saturn.png)
+
+- Rewrote a large Vue 2 frontend to Vue 3 and ported it from Bulma to Nuxt.
 - Focused on performance, scalability, and operational experience.
-- Working across frontend, backend, and infrastructure integration.
 
-[🔗 Visit Saturn Cloud](https://saturncloud.io/)
+> "Ken rewrote our MASSIVE Vue 2 frontend in Vue 3 … he did an amazing job. Our code base is so much better now. I highly recommend Ken for ALL frontend projects." — **Hugo Shi**, Founder & CTO, Saturn Cloud
 
-`Full-stack` · `Dashboard` · `Cloud`
+`Full-stack` · `Vue 3` · `Nuxt` · `Cloud`
+
+## Agency & client work
+
+Productized web delivery — and the businesses shipped through it.
+
+### MiniSiteHub
+
+A productized web service: design, build, and launch a professional business website in a single day, for a flat price — compressing a typical six-week agency workflow into 24 hours.
+
+![MiniSiteHub](/client-minisitehub.png)
+
+[🔗 minisitehub.com](https://minisitehub.com/)
+
+`SaaS` · `Web` · `Productized`
+
+### The Poke Co
+
+A fast, appetite-led website for a poke restaurant — menu, build-your-own ordering, and locations. *(In review.)*
+
+![The Poke Co](/client-pokeco.png)
+
+[🔗 thepokeco.com](https://thepokeco.com/preview/)
+
+`Restaurant` · `Ordering` · `Web`
+
+### Clarity Nails Spa
+
+A polished booking-focused site for a nail spa, built to showcase services and drive appointments.
+
+![Clarity Nails Spa](/client-clarity.png)
+
+[🔗 claritynailsspa.com](https://claritynailsspa.com/)
+
+`Salon` · `Booking` · `Web`
+
+### Jasmine Beauty School
+
+An enrollment-focused site for a cosmetology, esthetics, and nail-technology school.
+
+![Jasmine Beauty School](/client-jasmine.png)
+
+[🔗 jasminebeautyschool.com](https://jasminebeautyschool.com/)
+
+`Education` · `Enrollment` · `Web`
 
 ## Community projects
 

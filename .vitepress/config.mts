@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vitepress.dev/reference/site-config
 const SITE_URL = 'https://kieuminhcanh.github.io'
@@ -27,6 +28,10 @@ export default defineConfig({
   description: SITE_DESC,
   // Force dark, slim.vn-style appearance (no light/dark toggle).
   appearance: 'force-dark',
+  // Tailwind v4 via its Vite plugin (CSS-first config lives in theme/tailwind.css).
+  vite: {
+    plugins: [tailwindcss()],
+  },
   sitemap: {
     hostname: SITE_URL,
     transformItems(items) {
